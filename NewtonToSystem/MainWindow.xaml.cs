@@ -28,14 +28,12 @@ namespace NewtonToSystem
         {
             this.InitializeComponent();
         }
-
         private void SystemButtonClick(object sender, RoutedEventArgs e)
         {
             FormattedText.Text = dataAccessLayer.GetCard(false);
             JsonText.Text = dataAccessLayer.OriginalJSON;
             QurryAPIUrl.Text = dataAccessLayer.QurryAPIUrl;
         }
-
         private void NewtonButtonClick(object sender, RoutedEventArgs e) 
         {
             FormattedText.Text = dataAccessLayer.GetCard(true);

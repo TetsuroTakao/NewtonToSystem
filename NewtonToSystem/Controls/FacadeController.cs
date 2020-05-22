@@ -31,6 +31,7 @@ namespace NewtonToSystem
                     {
                         // Case 1. Using the Newtonsoft namespace to parse an object as deserializing through prepared type. 
                         var cardTemplates = JsonConvert.DeserializeObject<CardModel>(cards);
+                        results.Add("Result of the Case 1.");
                         foreach (var t in cardTemplates.templates)
                         {
                             results.Add(string.Format("file = [{0}], fullPath = [{1}]", t.file, t.fullPath));
@@ -40,6 +41,7 @@ namespace NewtonToSystem
                         // Use this process if you can't prepare the type of the JSON, or the type is not a complex structure.
                         var templates = JsonConvert.DeserializeObject<JObject>(cards);
                         var templatesArray = templates["templates"].ToArray();
+                        results.Add("Result of the Case 2.");
                         foreach (var t in templatesArray)
                         {
                             results.Add(string.Format("file = [{0}], fullPath = [{1}]", t["file"].ToString(), t["fullPath"].ToString()));

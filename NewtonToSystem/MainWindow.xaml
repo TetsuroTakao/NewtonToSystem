@@ -18,6 +18,6 @@
             <Button x:Name="Newton" Click="NewtonButtonClick" Margin="20,0,0,0">Newton namespace</Button>
         </StackPanel>
         <TextBlock Text="Formatted text" />
-        <TextBox x:Name="FormattedText" Text="file = [{0}], fullPath = [{1}]" Width="1000" Height="200"  Margin=" 0,0,0,20" />
+        <TextBox x:Name="FormattedText" Text="file = [{0}], fullPath = [{1}]" Width="1000" Height="200"  Margin=" 0,0,0,20" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" />
     </StackPanel>
 </Window>
