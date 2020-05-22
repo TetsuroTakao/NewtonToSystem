@@ -1,0 +1,23 @@
+﻿<Window
+  x:Class="NewtonToSystem.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="using:NewtonToSystem"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Original JSON" />
+            <TextBlock Text="from" Margin="10,0,0,0" />
+            <TextBlock x:Name="QurryAPIUrl" Text="API" Margin="10,0,0,0" />
+        </StackPanel>
+        <TextBox x:Name="JsonText" Text=" { }" Width="1000" Height="200"  Margin=" 0,0,0,20" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="System" Click="SystemButtonClick">System namespace</Button>
+            <Button x:Name="Newton" Click="NewtonButtonClick" Margin="20,0,0,0">Newton namespace</Button>
+        </StackPanel>
+        <TextBlock Text="Formatted text" />
+        <TextBox x:Name="FormattedText" Text="file = [{0}], fullPath = [{1}]" Width="1000" Height="200"  Margin=" 0,0,0,20" />
+    </StackPanel>
+</Window>
